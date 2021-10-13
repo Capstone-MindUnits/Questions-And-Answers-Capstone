@@ -36,8 +36,7 @@ class Qna extends React.Component {
             <p className="font-sans font-bold text-base text-gray-600">
               Q: Who what what which when where why whether how?
             </p>
-            <br />
-            <div className="answer">
+            <div className="answer mt-2">
               <p className="font-sans font-bold text-base text-gray-600">A:</p>
               <p className="font-sans font-ms ml-2 mt-1 text-gray-600 text-xs">
                 Icing macaron bear claw jelly beans chocolate cake. Cookie oat
@@ -45,44 +44,94 @@ class Qna extends React.Component {
                 Jujubes topping cake gummies lemon drops.
               </p>
             </div>
-            <br />
 
-            <div className="details">
-              <p className="font-sans font-ms ml-4 text-gray-400 ">
-                
+            <div className="details  mt-2">
+              <p className="font-sans font-ms ml-6 text-gray-400 ">
                 by User1234, January 1, 2019
               </p>
-              <p className=" ml-4 mr-4">|</p>
-              <p className=" mr-4">
+              <p className=" ml-4 mr-4 text-gray-600">|</p>
+              <p className=" mr-4 text-gray-600">
                 Helpful?
-                <a href="#" className="underline ml-2">
+                <a href="#" className="underline ml-2 mr-1 ">
                   Yes
-                </a>(2) </p>
-              <p className=" mr-4">|</p>
-              <p className="">
-                <a href="#" className="underline ">
+                </a>
+                (2){" "}
+              </p>
+              <p className=" mr-4 text-gray-600">|</p>
+              <p>
+                <a href="#" className="underline text-gray-600 ">
                   Report
                 </a>
               </p>
             </div>
           </div>
-         
-          <div className="side">          
-              <p >
-            Helpful?
-            <a href="#" className="underline ml-2">
-              Yes
-            </a>(25) </p>
-          <p className=" ml-4" >|</p>
-          <p >
 
-          <a href="#" className="underline ml-4">
-            Add Answer
-          </a>
-          </p>
+          <div className="side text-gray-600">
+            <p>
+              Helpful?
+              <a href="#" className="underline ml-2 mr-1">
+                Yes 
+              </a>
+               (25){" "}
+            </p>
+            <p className=" ml-4">|</p>
+            <p>
+              <a href="#" className="underline ml-4">
+                Add Answer
+              </a>
+            </p>
+          </div>
+        </div>
 
+        <div className="question  mt-3">
+          <div className="w-2/3">
+            <p className="font-sans font-bold text-base text-gray-600">
+              Q: Whomst whatever whence wherefore?
+
+            </p>
+            <div className="answer mt-2">
+              <p className="font-sans font-bold text-base text-gray-600">A:</p>
+              <p className="font-sans font-ms ml-2 mt-1 text-gray-600 text-xs">
+               Tootsie roll pudding jelly-o jujubes jelly-o wafer biscuit danish ice cream. Cotton candy sweet roll candy.
+              </p>
+            </div>
+
+            <div className="details mt-2">
+              <p className="font-sans font-ms ml-6 text-gray-400 ">
+                by User1337, May 1, 2019
+              </p>
+              <p className=" ml-4 mr-4 text-gray-600">|</p>
+              <p className=" mr-4 text-gray-600">
+                Helpful?
+                <a href="#" className="underline ml-2 mr-1 ">
+                  Yes
+                </a>
+                (0){" "}
+              </p>
+              <p className=" mr-4 text-gray-600">|</p>
+              <p>
+                <a href="#" className="underline text-gray-600 ">
+                  Report
+                </a>
+              </p>
+            </div>
           </div>
 
+          <div className="side text-gray-600">
+            <p>
+              Helpful?
+              <a href="#" className="underline ml-2 mr-1">
+                Yes
+              </a>
+              (2){" "}
+            </p>
+            <p className=" ml-4">|</p>
+            <p>
+              <a href="#" className="underline ml-4">
+                Add Answer
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     );
