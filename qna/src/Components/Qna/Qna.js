@@ -4,8 +4,10 @@ class Qna extends React.Component {
   render() {
     return (
       <div>
-        <p className="font-sans font-ms text-sm text-gray-600">QUESTIONS & ANSWERS</p>
-        <br/>
+        <p className="font-sans font-ms text-sm text-gray-600">
+          QUESTIONS & ANSWERS
+        </p>
+        <br />
         <div>
           <form className="relative">
             <svg
@@ -28,36 +30,60 @@ class Qna extends React.Component {
             />
           </form>
         </div>
-        <br/>
+        <br />
         <div className="question">
-        <div className="w-2/3">
-        <p className="font-sans font-bold text-base text-gray-600">Q: Who what what which when where why whether how?</p>         
-        <br/>
-        <div className="answer">  
-        <p className="font-sans font-bold text-base text-gray-600">A:</p>
-        <p className="font-sans font-ms ml-2 text-gray-600 text-xs"> 
-        Icing macaron bear claw jelly beans chocolate cake. Cookie oat cake chocolate halvah jelly cake cotton candy soufflé topping. Jujubes topping cake gummies lemon drops.</p>
+          <div className="w-2/3">
+            <p className="font-sans font-bold text-base text-gray-600">
+              Q: Who what what which when where why whether how?
+            </p>
+            <br />
+            <div className="answer">
+              <p className="font-sans font-bold text-base text-gray-600">A:</p>
+              <p className="font-sans font-ms ml-2 text-gray-600 text-xs">
+                Icing macaron bear claw jelly beans chocolate cake. Cookie oat
+                cake chocolate halvah jelly cake cotton candy soufflé topping.
+                Jujubes topping cake gummies lemon drops.
+              </p>
+            </div>
+            <br />
+
+            <div className="details">
+              <p className="font-sans font-ms ml-4 text-gray-400 ">
+                
+                by User1234, January 1, 2019
+              </p>
+              <p className=" ml-4 mr-4">|</p>
+              <p className=" mr-4">
+                Helpful?
+                <a href="#" className="underline ml-2">
+                  Yes
+                </a>(2) </p>
+              <p className=" mr-4">|</p>
+              <p className="">
+                <a href="#" className="underline ">
+                  Report
+                </a>
+              </p>
+            </div>
           </div>
-          <br/>
+         
+          <div className="side">          
+              <p >
+            Helpful?
+            <a href="#" className="underline ml-2">
+              Yes
+            </a>(25) </p>
+          <p className=" ml-4" >|</p>
+          <p >
 
-          <div className="details">  
-        <p className="font-sans font-ms ml-6 text-gray-400 text-xs"> by User1234, January 1, 2019</p>
-        <p className="text-xs ml-6 mr-6">|</p>
-        <p className="text-xs mr-6">Helpful? <a  href="#" className="underline ">Yes </a>(2)</p>
-        <p className="text-xs mr-6">|</p>
-        <p className="text-xs"><a  href="#" className="underline ">Report</a></p>
+          <a href="#" className="underline ml-4">
+            Add Answer
+          </a>
+          </p>
+
+          </div>
 
         </div>
-      
-        </div>
-
-        <p className="text-xs ">Helpful? <a  href="#" className="underline ">Yes </a>(25)</p>
-        <p className="text-xs">|</p>
-        <a  href="#" className="underline text-xs">Add Answer </a>
-        </div>
-
-
-
       </div>
     );
   }
