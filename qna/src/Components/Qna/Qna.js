@@ -39,7 +39,7 @@ class Qna extends React.Component {
             <br />
             <div className="answer">
               <p className="font-sans font-bold text-base text-gray-600">A:</p>
-              <p className="font-sans font-ms ml-2 text-gray-600 text-xs">
+              <p className="font-sans font-ms ml-2 mt-1 text-gray-600 text-xs">
                 Icing macaron bear claw jelly beans chocolate cake. Cookie oat
                 cake chocolate halvah jelly cake cotton candy soufflé topping.
                 Jujubes topping cake gummies lemon drops.
