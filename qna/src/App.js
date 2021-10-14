@@ -6,7 +6,7 @@ import Buttons from './Components/Buttons/Buttons.js'
 function App() {
   return (
     <div className="app pr-16 pl-16">  
-      <div className="grid grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 gap-4  w-3/5  mx-auto">
          <Search />
          <Qna />
          <Buttons />

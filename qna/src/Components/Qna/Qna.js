@@ -4,8 +4,6 @@ class Qna extends React.Component {
   render() {
     return (
       <div>
-       
-        <br />
         <div className="question">
           <div className="w-2/3">
             <p className="font-sans font-bold text-base text-gray-600">
@@ -100,24 +98,27 @@ class Qna extends React.Component {
                 <div class="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
               </div>
               <div className="details mt-2">
-              <p className="font-sans font-ms ml-6 text-gray-400 ">
-                by User1337 - <b> Seller,</b> May 1, 2019
+                <p className="font-sans font-ms ml-6 text-gray-400 ">
+                  by User1337 - <b> Seller,</b> May 1, 2019
+                </p>
+                <p className=" ml-4 mr-4 text-gray-600">|</p>
+                <p className=" mr-4 text-gray-600">
+                  Helpful?
+                  <a href="#" className="underline ml-2 mr-1 ">
+                    Yes
+                  </a>
+                  (0){" "}
+                </p>
+                <p className=" mr-4 text-gray-600">|</p>
+                <p>
+                  <a href="#" className="underline text-gray-600 ">
+                    Report
+                  </a>
+                </p>
+              </div>
+              <p className="load font-sans font-bold ml-6 mt-4 text-gray-600 ">
+                LOAD MORE ANSWERS
               </p>
-              <p className=" ml-4 mr-4 text-gray-600">|</p>
-              <p className=" mr-4 text-gray-600">
-                Helpful?
-                <a href="#" className="underline ml-2 mr-1 ">
-                  Yes
-                </a>
-                (0){" "}
-              </p>
-              <p className=" mr-4 text-gray-600">|</p>
-              <p>
-                <a href="#" className="underline text-gray-600 ">
-                  Report
-                </a>
-              </p>
-            </div>
             </div>
           </div>
 

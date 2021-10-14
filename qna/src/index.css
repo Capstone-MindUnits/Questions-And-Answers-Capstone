@@ -25,3 +25,6 @@
 .photos{
   display: flex;
 }
+.load{
+  font-size: 10px;
+}
