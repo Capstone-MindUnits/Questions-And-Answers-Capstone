@@ -5,7 +5,7 @@ class Search extends React.Component {
     return (
       <div>
         <div>
-          <p className="font-sans font-ms text-sm text-gray-600">
+          <p className="font-sans font-ms text-sm text-gray-600 mb-4">
             QUESTIONS & ANSWERS
           </p>
         </div>
