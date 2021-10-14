@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.app{
+/* .app{
   margin-left: 350px;
   margin-right: 350px;
-  
-}
+} */
 .question{
   display: flex;
   justify-content: space-between;
