@@ -92,10 +92,10 @@ class Qna extends React.Component {
               <p className="font-sans font-ms ml-6 mt-2 text-gray-600 text-xs">
                 Yes, as you can see in these photos.
               </p>
-              <div className="photos">
-                <div class="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
-                <div class="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
-                <div class="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
+              <div className="photos ">
+                <div className="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
+                <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
+                <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
               </div>
               <div className="details mt-2">
                 <p className="font-sans font-ms ml-6 text-gray-400 ">
