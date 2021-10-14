@@ -1,5 +1,6 @@
 import React from "react";
-
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 class Qna extends React.Component {
   render() {
     return (
@@ -93,9 +94,21 @@ class Qna extends React.Component {
                 Yes, as you can see in these photos.
               </p>
               <div className="photos ">
-                <div className="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
-                <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
-                <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100	 "></div>
+                <Popup
+                  trigger={<div className="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>} modal>
+                  <div className="box-border mt-3 h-screen w-screen p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                </Popup>
+
+                <Popup
+                  trigger={<div className="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>} modal>
+                  <div className="box-border mt-3 h-screen w-screen p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                </Popup>
+
+                <Popup
+                  trigger={<div className="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>} modal>
+                  <div className="box-border mt-3 h-screen w-screen p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                </Popup>
+
               </div>
               <div className="details mt-2">
                 <p className="font-sans font-ms ml-6 text-gray-400 ">

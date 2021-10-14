@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .app{
-  margin-left: 350px;
-  margin-right: 350px;
-} */
 .question{
   display: flex;
   justify-content: space-between;
@@ -27,4 +23,9 @@
 }
 .load{
   font-size: 10px;
+}
+
+.imgSize{
+  height: 100%;
+  width: 100%;
 }
