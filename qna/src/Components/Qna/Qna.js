@@ -4,11 +4,9 @@ import "reactjs-popup/dist/index.css";
 
 function Qna (props){
   console.log('props', props)
-  console.log('propsiiss', props.data.results)
 
     return (
       <div>
-        
         <div className="question">
           <div className="w-2/3">
             <p className="font-sans font-bold text-base text-gray-600">

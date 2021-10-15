@@ -4,7 +4,7 @@ import Search from "./Components/Search/Search.js";
 import AButton from "./Components/Buttons/AButton.js";
 import QButton from "./Components/Buttons/QButton.js";
 import axios from 'axios';
-
+import Token from '../src/config/token.js'
 class App extends React.Component {
   constructor() {
     super();
@@ -15,7 +15,7 @@ class App extends React.Component {
 
   componentDidMount() {
      axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/?product_id=40393',{headers:{
-authorization: ''
+     authorization: Token
      }})
      .then(data => this.setState ({
       qna: data.data
