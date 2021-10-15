@@ -29,7 +29,9 @@ getA(){
   axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/329428/answers',{headers:{
     authorization: Token
     }})
-    .then(data => console.log('ee',data.data))
+    .then(data => this.setState ({
+      answers: data.data
+    }))
    .catch((err) => console.log(err))
 
 }
