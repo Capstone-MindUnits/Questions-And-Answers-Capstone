@@ -9,18 +9,33 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      qna: []
+      qna: [],
+      answers:[]
     };
-  }
+    this.getQ = this.getQ.bind(this);
+    this.getA = this.getA.bind(this);
 
+  }
+getQ(){
+  axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/?product_id=40393',{headers:{
+    authorization: Token
+    }})
+    .then(data => this.setState ({
+     qna: data.data
+   }))
+   .catch((err) => console.log(err))
+};
+getA(){
+  axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/329428/answers',{headers:{
+    authorization: Token
+    }})
+    .then(data => console.log('ee',data.data))
+   .catch((err) => console.log(err))
+
+}
   componentDidMount() {
-     axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/?product_id=40393',{headers:{
-     authorization: Token
-     }})
-     .then(data => this.setState ({
-      qna: data.data
-    }))
-    .catch((err) => console.log(err))
+   this.getQ()
+   this.getA()
   }
 
   render() {
@@ -30,7 +45,7 @@ class App extends React.Component {
     <div className="app pr-16 pl-16">
       <div className="grid grid-cols-1 gap-4  w-3/5  mx-auto">
         <Search />
-        <Qna data = {this.state.qna}/>
+        <Qna data = {this.state.qna} answers = {this.state.answers}/>
       </div>
       <div
         className="grid gap-4  w-3/5 mt-4 mx-auto"
