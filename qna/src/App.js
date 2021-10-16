@@ -30,8 +30,6 @@ getQ(){
   }
 
   render() {
-    console.log(this.state.qna)
-    console.log('a', this.state.qna.results)
       return (
     <div className="app pr-16 pl-16">
       <div className="grid grid-cols-1 gap-4  w-3/5  mx-auto">

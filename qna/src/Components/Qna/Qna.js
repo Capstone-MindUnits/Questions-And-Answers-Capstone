@@ -22,7 +22,7 @@ function Qna(props) {
                     <p className="font-sans font-bold text-base text-gray-600">
                       A:
                     </p>
-                    <div>
+                    <div> 
                       {Object.values(e.answers)
                         .slice(0, 2)
                         .sort((a, b) => {
