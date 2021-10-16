@@ -9,10 +9,12 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      qna: []
+      qna: [],
+      count: 0
     };
     this.getQ = this.getQ.bind(this);
   }
+  
 getQ(){
   axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/?product_id=40393',{headers:{
     authorization: Token
