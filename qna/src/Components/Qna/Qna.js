@@ -7,13 +7,10 @@ function Qna(props) {
   console.log("props", props);
   console.log("propsiiiii", props.data);
   console.log("pro", props.data.results);
-  console.log("plzzzzz", props.answers);
-  // console.log('propppp', props.data.results[0])
-  // console.log('prrrrr', props.data.results[0].question_body)
-  // moment().format('LL'); moment(testDate).format('MM/DD/YYYY');
+
   return (
-    <div>
-      <div className="question">
+    <div className='overflow-y-auto' style = {{height: "550px"}}>
+      {/* <div className="question">
         <div className="w-2/3">
           <p className="font-sans font-bold text-base text-gray-600">
             Q: Who what which when where why whether how?
@@ -37,7 +34,7 @@ function Qna(props) {
               <a href="#" className="underline ml-2 mr-1 ">
                 Yes
               </a>
-              (2){" "}
+              (2)
             </p>
             <p className=" mr-4 text-gray-600">|</p>
             <p>
@@ -54,7 +51,7 @@ function Qna(props) {
             <a href="#" className="underline ml-2 mr-1">
               Yes
             </a>
-            (25){" "}
+            (25)
           </p>
           <p className=" ml-4">|</p>
 
@@ -114,16 +111,16 @@ function Qna(props) {
                   </button>
                 </div>
               </div>
-            </div>{" "}
+            </div>
           </Popup>
         </div>
-      </div>
+      </div> */}
 
       {props.data.results &&
-        props.data.results.slice(0,2).map((e, key) => {
+        props.data.results.map((e, key) => {
           return (
             <div className="question  mt-3" key={key}>
-              <div className="w-2/3">
+              <div  className="w-2/3" style={{height:'275px'}}>
                 <p className="font-sans font-bold text-base text-gray-600">
                   {/* Q: Whomst whatever whence wherefore? */}
                   Q: {e.question_body}
@@ -132,83 +129,103 @@ function Qna(props) {
                   <p className="font-sans font-bold text-base text-gray-600">
                     A:
                   </p>
-                  <p className="font-sans font-ms ml-2 mt-1 text-gray-600 text-xs">
-                    Tootsie roll pudding jelly-o jujubes jelly-o wafer biscuit
-                    danish ice cream. Cotton candy sweet roll candy.
-                  </p>
-                </div>
+                  <div>
+                    {" "}
+                    {Object.values(e.answers)
+                      .slice(0, 2)
+                      .map((a, key) => {
+                        return (
+                          <div key={key}>
+                            <p className="font-sans font-ms ml-2 mt-1 text-gray-600 text-xs">
+                              {a.body}
+                            </p>
+                            <div className="details mt-2">
+                              <p className="font-sans font-ms ml-2 text-gray-400 ">
+                                by {a.answerer_name} ,
+                                {moment(a.date).format("LL")}
+                                {/* by User1337, May 1 2019 */}
+                              </p>
+                              <p className=" ml-4 mr-4 text-gray-600">|</p>
+                              <p className=" mr-4 text-gray-600">
+                                Helpful?
+                                <a href="#" className="underline ml-2 mr-1 ">
+                                  Yes
+                                </a>
+                                ({a.helpfulness})
+                              </p>
+                              <p className=" mr-4 text-gray-600">|</p>
+                              <p>
+                                <a
+                                  href="#"
+                                  className="underline text-gray-600 "
+                                >
+                                  Report
+                                </a>
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}{" "}
+                    <div>
+                      <p className="font-sans font-ms ml-2 mt-2 text-gray-600 text-xs">
+                        Yes, as you can see in these photos.
+                      </p>
+                      <div className="photos ">
+                        <Popup
+                          trigger={
+                            <div className="box-border mt-3 ml-2 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 ">
+                              {/* <img  src = {a.photos}  /> */}
+                            </div>
+                          }
+                          modal
+                        >
+                          <div className="box-border mt-3 w-full h-96 border-2 border-gray-400	bg-gray-100 "></div>
+                        </Popup>
 
-                <div className="details mt-2">
-                  <p className="font-sans font-ms ml-6 text-gray-400 ">
-                    by {e.asker_name}, {moment(e.answers.date).format("LL")}
-                    {/* by User1337, May 1 2019 */}
-                  </p>
-                  <p className=" ml-4 mr-4 text-gray-600">|</p>
-                  <p className=" mr-4 text-gray-600">
-                    Helpful?
-                    <a href="#" className="underline ml-2 mr-1 ">
-                      Yes
-                    </a>
-                    (0){" "}
-                  </p>
-                  <p className=" mr-4 text-gray-600">|</p>
-                  <p>
-                    <a href="#" className="underline text-gray-600 ">
-                      Report
-                    </a>
-                  </p>
-                </div>
-                <div>
-                  <p className="font-sans font-ms ml-6 mt-2 text-gray-600 text-xs">
-                    Yes, as you can see in these photos.
-                  </p>
-                  <div className="photos ">
-                    <Popup
-                      trigger={
-                        <div className="box-border mt-3 ml-6 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>
-                      }
-                      modal
-                    >
-                      <div className="box-border mt-3 w-full h-96 border-2 border-gray-400	bg-gray-100 "></div>
-                    </Popup>
+                        <Popup
+                          trigger={
+                            <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                          }
+                          modal
+                        >
+                          <div className="box-border mt-3 w-full h-96 p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                        </Popup>
 
-                    <Popup
-                      trigger={
-                        <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>
-                      }
-                      modal
-                    >
-                      <div className="box-border mt-3 w-full h-96 p-4 border-2 border-gray-400	bg-gray-100 "></div>
-                    </Popup>
-
-                    <Popup
-                      trigger={
-                        <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>
-                      }
-                      modal
-                    >
-                      <div className="box-border mt-3 w-full h-96 p-4 border-2 border-gray-400	bg-gray-100 "></div>
-                    </Popup>
-                  </div>
-                  <div className="details mt-2">
-                    <p className="font-sans font-ms ml-6 text-gray-400 ">
-                      {/* by {e.asker_name} - <b> Seller,</b> May 1, 2019 */}
-                      by User1337 - <b> Seller,</b> May 1 2019
-                    </p>
-                    <p className=" ml-4 mr-4 text-gray-600">|</p>
-                    <p className=" mr-4 text-gray-600">
-                      Helpful?
-                      <a href="#" className="underline ml-2 mr-1 ">
-                        Yes
-                      </a>
-                      (0)
-                    </p>
-                    <p className=" mr-4 text-gray-600">|</p>
-                    <p>
-                      <a href="#" className="underline text-gray-600 ">
-                        Report
-                      </a>
-                    </p>
+                        <Popup
+                          trigger={
+                            <div className="box-border mt-3 ml-3 h-12 w-20 p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                          }
+                          modal
+                        >
+                          <div className="box-border mt-3 w-full h-96 p-4 border-2 border-gray-400	bg-gray-100 "></div>
+                        </Popup>
+                      </div>
+                      <div className="details mt-2">
+                        <p className="font-sans font-ms ml-2 text-gray-400 ">
+                          {/* by {e.asker_name} - <b> Seller,</b> May 1, 2019 */}
+                          by User1337 - <b> Seller,</b> May 1 2019
+                        </p>
+                        <p className=" ml-4 mr-4 text-gray-600">|</p>
+                        <p className=" mr-4 text-gray-600">
+                          Helpful?
+                          <a href="#" className="underline ml-2 mr-1 ">
+                            Yes
+                          </a>
+                          (0)
+                        </p>
+                        <p className=" mr-4 text-gray-600">|</p>
+                        <p>
+                          <a href="#" className="underline text-gray-600 ">
+                            Report
+                          </a>
+                        </p>
+                      </div>
+                    </div>{" "}
+                    <div>
+                      <p className="load font-sans font-bold ml-2 mt-4 text-gray-600 ">
+                        LOAD MORE ANSWERS
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -219,7 +236,7 @@ function Qna(props) {
                   <a href="#" className="underline ml-2 mr-1">
                     Yes
                   </a>
-                  (2){" "}
+                  ({e.question_helpfulness})
                 </p>
                 <p className=" ml-4">|</p>
 
@@ -279,18 +296,12 @@ function Qna(props) {
                         </button>
                       </div>
                     </div>
-                  </div>{" "}
+                  </div>
                 </Popup>
               </div>
             </div>
           );
         })}
-
-      <div>
-        <p className="load font-sans font-bold ml-6 mt-4 text-gray-600 ">
-          LOAD MORE ANSWERS
-        </p>
-      </div>
     </div>
   );
 }

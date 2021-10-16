@@ -9,13 +9,9 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      qna: [],
-      answers:[],
-      ans: []
+      qna: []
     };
     this.getQ = this.getQ.bind(this);
-    this.getA = this.getA.bind(this);
-    this.getAns = this.getAns.bind(this);
   }
 getQ(){
   axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/?product_id=40393',{headers:{
@@ -26,31 +22,9 @@ getQ(){
    }))
    .catch((err) => console.log(err))
 };
-getAns(){
-  axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/?product_id=40393',{headers:{
-    authorization: Token
-    }})
-    .then(data => 
-      
-      this.setState ({
-     ans: data.data
-   }))
-   .catch((err) => console.log(err))
-};
-getA(){
-  axios.get( 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp/qa/questions/329428/answers',{headers:{
-    authorization: Token
-    }})
-    .then(data => this.setState ({
-      answers: data.data
-    }))
-   .catch((err) => console.log(err))
 
-}
   componentDidMount() {
    this.getQ()
-   this.getA()
-   this.getAns()
   }
 
   render() {
