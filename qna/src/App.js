@@ -10,9 +10,10 @@ class App extends React.Component {
     super();
     this.state = {
       qna: [],
-      count: 0
+      initialCount : 2
     };
     this.getQ = this.getQ.bind(this);
+    this.changeView = this.changeView.bind(this)
   }
   
 getQ(){
@@ -29,18 +30,25 @@ getQ(){
    this.getQ()
   }
 
+  changeView(){
+    this.setState({
+      initialCount : this.state.qna.results.length
+    })
+  }
+
   render() {
+    console.log(this.state.qna)
       return (
     <div className="app pr-16 pl-16">
       <div className="grid grid-cols-1 gap-4  w-3/5  mx-auto">
         <Search />
-        <Qna data = {this.state.qna} answers = {this.state.answers}/>
+        <Qna initialCount = {this.state.initialCount} data = {this.state.qna} />
       </div>
       <div
         className="grid gap-4  w-3/5 mt-4 mx-auto"
         style={{ display: "flex" }}
       >
-        <AButton />
+        <AButton changeView={this.changeView} />
         <QButton />
       </div>
     </div>
