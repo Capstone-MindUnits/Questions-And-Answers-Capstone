@@ -34,7 +34,7 @@ function Qna(props) {
                             <div key={key}>
                               <p className="font-sans font-ms ml-2 mt-1 text-gray-600 text-xs">
                                 {a.body}
-                              </p>
+                              </p>                     
                               <div className="details mt-2">
                                 <p className="font-sans font-ms ml-2 text-gray-400 ">
                                   by {a.answerer_name} ,
