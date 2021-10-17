@@ -10,7 +10,8 @@ function Qna(props) {
         props.data.results
           .sort((a, b) => {
             return b.helpfulness - a.helpfulness;
-          }).slice(0,props.initialCount)
+          })
+          .slice(0, props.initialCount)
           .map((e, key) => {
             return (
               <div className="question  mt-3" key={key}>
@@ -22,7 +23,7 @@ function Qna(props) {
                     <p className="font-sans font-bold text-base text-gray-600">
                       A:
                     </p>
-                    <div> 
+                    <div>
                       {Object.values(e.answers)
                         .slice(0, 2)
                         .sort((a, b) => {
